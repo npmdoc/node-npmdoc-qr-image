@@ -1,17 +1,40 @@
 {
-    "buildNpmdoc":"qr-image",
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "buildNpmdoc": "qr-image",
+    "description": "api documentation for [qr-image (v3.2.0)](https://github.com/alexeyten/qr-image) [![npm package](https://img.shields.io/npm/v/npmdoc-qr-image.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-qr-image) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-qr-image.svg)](https://travis-ci.org/npmdoc/node-npmdoc-qr-image)",
     "devDependencies": {
-        "qr-image": "*",
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "qr-image": "*",
         "utility2": "kaizhu256/node-utility2#alpha"
     },
-    "name":"npmdoc-qr-image",
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-qr-image",
+    "keywords": [
+        "documentation",
+        "qr-image"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_qr_image.js",
+    "name": "npmdoc-qr-image",
+    "nameAlias": "npmdoc_qr_image",
+    "nameOriginal": "npmdoc-qr-image",
+    "os": [
+        "darwin",
+        "linux"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/npmdoc/node-npmdoc-qr-image.git"
     },
     "scripts": {
-        "build-ci": "utility2 shReadmeTest build_ci.sh"
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
     "version": "0.0.1"
 }
