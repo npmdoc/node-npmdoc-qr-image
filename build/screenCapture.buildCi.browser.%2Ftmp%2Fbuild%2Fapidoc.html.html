@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/alexeyten/qr-image"
-
-    >qr-image (v3.2.0)</a>
+    <a href="https://github.com/alexeyten/qr-image">qr-image (v3.2.0)</a>
 </h1>
 <h4>QR Code generator (png, svg, pdf, eps)</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.qr-image">module qr-image</a><ol>
 
@@ -120,14 +113,14 @@
     stream._read = fn_noop;
 
     switch (options.type) {
-    case &#x27;svg&#x27;:
-    case &#x27;pdf&#x27;:
-    case &#x27;eps&#x27;:
+    case 'svg':
+    case 'pdf':
+    case 'eps':
         process.nextTick(function() {
             vector[options.type](matrix, stream, options.margin, options.size);
         });
         break;
-    case &#x27;svgpath&#x27;:
+    case 'svgpath':
         // deprecated, use svg_object method
         process.nextTick(function() {
             var obj = vector.svg_object(matrix, options.margin, options.size);
@@ -135,7 +128,7 @@
             stream.push(null);
         });
         break;
-    case &#x27;png&#x27;:
+    case 'png':
     default:
         process.nextTick(function() {
             var bitmap = png.bitmap(matrix, options.size, options.margin);
@@ -154,12 +147,12 @@ Usage
 
 Example:
 ```javascript
-var qr = require(&#x27;qr-image&#x27;);
+var qr = require('qr-image');
 
-var qr_svg = qr.<span class="apidocCodeKeywordSpan">image</span>(&#x27;I love QR!&#x27;, { type: &#x27;svg&#x27; });
-qr_svg.pipe(require(&#x27;fs&#x27;).createWriteStream(&#x27;i_love_qr.svg&#x27;));
+var qr_svg = qr.<span class="apidocCodeKeywordSpan">image</span>('I love QR!', { type: 'svg' });
+qr_svg.pipe(require('fs').createWriteStream('i_love_qr.svg'));
 
-var svg_string = qr.imageSync(&#x27;I love QR!&#x27;, { type: &#x27;svg&#x27; });
+var svg_string = qr.imageSync('I love QR!', { type: 'svg' });
 ```
 
 [More examples](./examples)
@@ -183,13 +176,13 @@ var svg_string = qr.imageSync(&#x27;I love QR!&#x27;, { type: &#x27;svg&#x27; })
     var result;
 
     switch (options.type) {
-    case &#x27;svg&#x27;:
-    case &#x27;pdf&#x27;:
-    case &#x27;eps&#x27;:
+    case 'svg':
+    case 'pdf':
+    case 'eps':
         vector[options.type](matrix, stream, options.margin, options.size);
-        result = stream.filter(Boolean).join(&#x27;&#x27;);
+        result = stream.filter(Boolean).join('');
         break;
-    case &#x27;png&#x27;:
+    case 'png':
     default:
         var bitmap = png.bitmap(matrix, options.size, options.margin);
         if (options.customize) {
@@ -204,17 +197,17 @@ var svg_string = qr.imageSync(&#x27;I love QR!&#x27;, { type: &#x27;svg&#x27; })
     <li>example usage<pre class="apidocCodePre">...
 Example:
 ```javascript
-var qr = require(&#x27;qr-image&#x27;);
+var qr = require('qr-image');
 
-var qr_svg = qr.image(&#x27;I love QR!&#x27;, { type: &#x27;svg&#x27; });
-qr_svg.pipe(require(&#x27;fs&#x27;).createWriteStream(&#x27;i_love_qr.svg&#x27;));
+var qr_svg = qr.image('I love QR!', { type: 'svg' });
+qr_svg.pipe(require('fs').createWriteStream('i_love_qr.svg'));
 
-var svg_string = qr.<span class="apidocCodeKeywordSpan">imageSync</span>(&#x27;I love QR!&#x27;, { type: &#x27;svg&#x27; });
+var svg_string = qr.<span class="apidocCodeKeywordSpan">imageSync</span>('I love QR!', { type: 'svg' });
 ```
 
 [More examples](./examples)
 
-`qr = require(&#x27;qr-image&#x27;)`
+`qr = require('qr-image')`
 
 ### Methods
 ...</pre></li>
@@ -230,27 +223,27 @@ var svg_string = qr.<span class="apidocCodeKeywordSpan">imageSync</span>(&#x27;I
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function QR(text, ec_level, parse_url) {
-    ec_level = EC_LEVELS.indexOf(ec_level) &#x3e; -1 ? ec_level : &#x27;M&#x27;;
+    ec_level = EC_LEVELS.indexOf(ec_level) &gt; -1 ? ec_level : 'M';
     var message = encode(text, parse_url);
     var data = fillTemplate(message, getTemplate(message, ec_level));
     return matrix.getMatrix(data);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-`qr = require(&#x27;qr-image&#x27;)`
+`qr = require('qr-image')`
 
 ### Methods
 
-* `qr.image(text, [ec_level | options])` — Readable stream with image data;
-* `qr.imageSync(text, [ec_level | options])` — string with image data. (Buffer for `png`);
-* `qr.svgObject(text, [ec_level | options])` — object with SVG path and size;
-* `qr.<span class="apidocCodeKeywordSpan">matrix</span>(text, [ec_level])` — 2D array.
+* `qr.image(text, [ec_level | options])` â€” Readable stream with image data;
+* `qr.imageSync(text, [ec_level | options])` â€” string with image data. (Buffer for `png`);
+* `qr.svgObject(text, [ec_level | options])` â€” object with SVG path and size;
+* `qr.<span class="apidocCodeKeywordSpan">matrix</span>(text, [ec_level])` â€” 2D array.
 
 
 ### Options
 
-* `text` — text to encode;
-* `ec_level` — error correction level. One of `L`, `M`, `Q`, `H`. Default `M`.
-* `options` — image options object:
+* `text` â€” text to encode;
+* `ec_level` â€” error correction level. One of `L`, `M`, `Q`, `H`. Default `M`.
+* `options` â€” image options object:
 ...</pre></li>
     </ul>
 
@@ -264,27 +257,27 @@ var svg_string = qr.<span class="apidocCodeKeywordSpan">imageSync</span>(&#x27;I
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function svg_object(text, options) {
-    options = get_options(options, &#x27;svg&#x27;);
+    options = get_options(options, 'svg');
 
     var matrix = QR(text, options.ec_level);
     return vector.svg_object(matrix, options.margin);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-`qr = require(&#x27;qr-image&#x27;)`
+`qr = require('qr-image')`
 
 ### Methods
 
-* `qr.image(text, [ec_level | options])` — Readable stream with image data;
-* `qr.imageSync(text, [ec_level | options])` — string with image data. (Buffer for `png`);
-* `qr.<span class="apidocCodeKeywordSpan">svgObject</span>(text, [ec_level | options])` — object with SVG path and size;
-* `qr.matrix(text, [ec_level])` — 2D array.
+* `qr.image(text, [ec_level | options])` â€” Readable stream with image data;
+* `qr.imageSync(text, [ec_level | options])` â€” string with image data. (Buffer for `png`);
+* `qr.<span class="apidocCodeKeywordSpan">svgObject</span>(text, [ec_level | options])` â€” object with SVG path and size;
+* `qr.matrix(text, [ec_level])` â€” 2D array.
 
 
 ### Options
 
-* `text` — text to encode;
-* `ec_level` — error correction level. One of `L`, `M`, `Q`, `H`. Default `M`.
+* `text` â€” text to encode;
+* `ec_level` â€” error correction level. One of `L`, `M`, `Q`, `H`. Default `M`.
 ...</pre></li>
     </ul>
 
@@ -297,3 +290,4 @@ var svg_string = qr.<span class="apidocCodeKeywordSpan">imageSync</span>(&#x27;I
     ]
 </div>
 </div>
+</body></html>

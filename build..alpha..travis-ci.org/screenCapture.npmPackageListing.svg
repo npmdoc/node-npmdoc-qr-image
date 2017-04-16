@@ -1,18 +1,18 @@
 <svg height="238" width="720" xmlns="http://www.w3.org/2000/svg">
 <rect height="238" fill="#555" width="720"></rect>
 <text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
-<tspan x="10" y="26">  0.  2017-04-03 10:41:05 +0000    40356 byte  .</tspan>
-<tspan x="10" y="42">  1.  2017-04-03 10:41:05 +0000     1054 byte  LICENSE</tspan>
-<tspan x="10" y="58">  2.  2017-04-03 10:41:05 +0000     1892 byte  README.md</tspan>
-<tspan x="10" y="74">  3.  2017-04-03 10:41:05 +0000     1005 byte  lib/crc32.js</tspan>
-<tspan x="10" y="90">  4.  2017-04-03 10:41:05 +0000     1118 byte  lib/crc32buffer.js</tspan>
-<tspan x="10" y="106">  5.  2017-04-03 10:41:05 +0000     3764 byte  lib/encode.js</tspan>
-<tspan x="10" y="122">  6.  2017-04-03 10:41:05 +0000     1660 byte  lib/errorcode.js</tspan>
-<tspan x="10" y="138">  7.  2017-04-03 10:41:05 +0000    10162 byte  lib/matrix.js</tspan>
-<tspan x="10" y="154">  8.  2017-04-03 10:41:05 +0000     1679 byte  lib/png.js</tspan>
-<tspan x="10" y="170">  9.  2017-04-03 10:41:05 +0000     5268 byte  lib/qr-base.js</tspan>
-<tspan x="10" y="186"> 10.  2017-04-03 10:41:05 +0000     2879 byte  lib/qr.js</tspan>
-<tspan x="10" y="202"> 11.  2017-04-03 10:41:05 +0000     7601 byte  lib/vector.js</tspan>
-<tspan x="10" y="218"> 12.  2017-04-03 10:41:05 +0000     2274 byte  package.json</tspan>
+<tspan x="10" y="26">  0.  2017-04-16 08:57:58 +0000    40356 bytes  .</tspan>
+<tspan x="10" y="42">  1.  2017-04-16 08:57:58 +0000     1054 bytes  LICENSE</tspan>
+<tspan x="10" y="58">  2.  2017-04-16 08:57:58 +0000     1892 bytes  README.md</tspan>
+<tspan x="10" y="74">  3.  2017-04-16 08:57:58 +0000     1005 bytes  lib/crc32.js</tspan>
+<tspan x="10" y="90">  4.  2017-04-16 08:57:58 +0000     1118 bytes  lib/crc32buffer.js</tspan>
+<tspan x="10" y="106">  5.  2017-04-16 08:57:58 +0000     3764 bytes  lib/encode.js</tspan>
+<tspan x="10" y="122">  6.  2017-04-16 08:57:58 +0000     1660 bytes  lib/errorcode.js</tspan>
+<tspan x="10" y="138">  7.  2017-04-16 08:57:58 +0000    10162 bytes  lib/matrix.js</tspan>
+<tspan x="10" y="154">  8.  2017-04-16 08:57:58 +0000     1679 bytes  lib/png.js</tspan>
+<tspan x="10" y="170">  9.  2017-04-16 08:57:58 +0000     5268 bytes  lib/qr-base.js</tspan>
+<tspan x="10" y="186"> 10.  2017-04-16 08:57:58 +0000     2879 bytes  lib/qr.js</tspan>
+<tspan x="10" y="202"> 11.  2017-04-16 08:57:58 +0000     7601 bytes  lib/vector.js</tspan>
+<tspan x="10" y="218"> 12.  2017-04-16 08:57:58 +0000     2274 bytes  package.json</tspan>
 </text>
 </svg>
